@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+.ser{
+    margin-top: 30px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center
+}
+.sers{
+    width: 70%;
+    height: auto;
+    border-top: 2px solid gainsboro;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: nowrap;
+}
+.sers .list{
+    display: flex;
+    justify-content: center;
+}
+.sers .s input{
+    width: 300px;
+    height: 40px;
+    margin-top: 3px;
+    font-size: 20px;
+    border: none;
+    border: 2px solid rebeccapurple;
+    background-color: gainsboro;
+    color: rebeccapurple;
+}
+
+.ser .list button{
+
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.7s;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ser .list button:hover{
+    color: black;
+    background-color: transparent;
+    border: 2px solid rebeccapurple;
+}
+@media only screen and (max-width: 1000px){
+    .sers .s input{
+        margin-left: 20px;
+    }
+    .ser .list button{
+        margin: 8px 5px;
+        width: 100px;
+        height: 30px;
+
+    }
+}
+@media only screen and (max-width: 750px){
+    .sers .s input{
+        margin-left: 20px;
+    }
+    .ser .list button{
+        margin: 8px 5px;
+        width: 80px;
+        height: 30px;
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .sers .s input{
+        margin-left: 10px;
+        height: 35px;
+        width: 350px;
+        margin-top: 5px;
+    }
+    .ser .list button{
+        margin: 8px 5px;
+        width: 80px;
+        height: 30px;
+        font-size: 11px;
+    }
+    .sers{
+        flex-wrap: wrap;
+    }
+}

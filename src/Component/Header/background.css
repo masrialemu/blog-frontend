@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    
+    width: 100%;
+    height: 89vh;
+    box-shadow: 20 0 0px 20px gray;
+    border-bottom: 1px solid gray;
+}
+.bg .bgs img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.bg .title{
+  position: absolute;
+  bottom: 50%;
+  left: 35%;
+  border: 2px solid greenyellow;
+}
+.bg .bgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-position:bottom;
+    background-size: cover;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.7)), url(../../img/IMG_20221019_003638_872.jpg)
+    
+} 
+.bg .bgs h1{
+    font-size: 60px;
+    color: white;
+}
+.bg .bgs p{
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+     width: 600px;
+     height: 200px;
+     margin-top:20px;
+}
+.bg .bgs h4{
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(44, 18, 70);
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.7s;
+}
+.bg .bgs h4:hover{
+    background-color: transparent;
+   
+}
+@media only screen and (max-width: 700px){
+    
+.bg .bgs h1{
+    font-size: 40px;
+    color: white;
+}
+.bg .bgs p{
+    font-size: 20px;
+    width: 500px;
+
+}
+.bg .bgs h4{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+}
+}
+@media only screen and (max-width: 550px){
+    .bg .bgs h1{
+        font-size: 40px;
+        color: white;
+    }
+    .bg .bgs p{
+        font-size: 17px;
+        width: 400px;
+    
+    }
+    .bg .bgs h4{
+        width: 250px;
+        height: 40px;
+        font-size: 17px;
+    }
+    }
+    @media only screen and (max-width: 450px){
+        .bg .bgs h1{
+            font-size: 35px;
+            color: white;
+        }
+        .bg .bgs p{
+            font-size: 17px;
+            width: 320px;
+        
+        }
+        .bg .bgs h4{
+            width: 220px;
+            height: 40px;
+            font-size: 15px;
+        }
+        }
+        

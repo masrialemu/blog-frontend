@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top{
+    margin-top: 200px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.top .tops{
+    justify-content: center;
+    display: flex;
+   flex-wrap: nowrap;
+}
+.top .tt{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 30px;
+    font-size: 40px;
+    color:rgb(46, 18, 73);
+    font-weight: 1000;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.topp{
+    margin: 10px;
+    transform: scale(1);
+    border: 1px solid rgb(194, 191, 191);
+    width: 27.5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.topp:hover{
+    transform: scale(1.01);
+}
+.top .list .t{
+    font-size: 20px;
+    color: gray;
+    margin-top: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.top .list .n h1{
+    font-size: 30px;
+    color:rgb(46, 18, 73);
+    font-weight: 1000;
+    margin: 7px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.top .list{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top .list p{
+    margin-top: 10PX;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+.top .list .btn button{
+   width: 100px;
+   height: 40px;
+   font-size: 20px;
+   margin-top: 15px;
+   cursor: pointer;
+   background-color:rgb(46, 18, 73) ;
+   color: white;
+   border: none;
+   transition: 0.7s;
+}
+.top .list .btn button:hover{
+    background-color: transparent;
+    border: 1px solid rgb(46, 18, 73)  ;
+    color: black;
+}
+.top img{
+    width: 100%;
+    height: 300px;
+}
+@media only screen and (max-width: 1360px){
+    .top{
+        width: 90%;
+        height: auto;
+        
+    }
+    .top{
+        display: flex;
+       
+    }
+}
+@media only screen and (max-width: 1100px){
+    .top{
+        width: 95%;
+        height: auto;
+        
+    }
+    .top {
+        display: flex;
+       
+    }
+    .top .list .n h1{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .tops{
+        width: 100%;
+      
+    }
+    .topp{
+        width: 100%;
+    }
+    .topp img{
+       height: 220px;
+    }
+    .top .list .n h1{
+        font-size: 20px;
+    }
+    .top .list .t{
+        font-size: 17px;
+    }
+    .top .list p{
+        font-size: 13px;
+    }
+    .top .list .btn button{
+        height: 30px;
+        font-size: 17px;
+        width: 90px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .topp{
+        width: 60%;
+        overflow-y: scroll;
+        
+        
+    }
+    .top .tops{
+        flex-wrap: wrap;
+    }
+    .topp img{
+       height: 220px;
+    }
+    .top .list .n h1{
+        font-size: 20px;
+    }
+    .top .tt{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .top .list .t{
+        font-size: 17px;
+    }
+    .top .list p{
+        font-size: 13px;
+    }
+    .top .list .btn button{
+        height: 30px;
+        font-size: 17px;
+        width: 90px;
+    }
+    .top{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .topp{
+        width: 80%;
+    }
+}

@@ -1,0 +1,242 @@
+.Top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+.Top .topx{
+    width: 80%;
+    background-color:hsl(208, 100%, 96%);
+}
+.Top .topx .topp img{
+    width: 350px;
+    height: 350px;
+
+}
+.Top .topx{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Top .topx .tops{
+    overflow: hidden;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    
+}
+.Top .topx .topp{
+    width: 400px;
+    overflow: hidden;
+    background-color:hsl(208, 100%, 94%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Top .topx .list{
+    width: 350px;
+    overflow: hidden;
+    height: 300px;
+}
+.Top .topx .list .t{
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 25px;
+    width: 350px;
+    overflow: hidden;
+    justify-content: space-around;
+}
+.Top .topx .list .n{
+    height: 50px;
+    overflow: hidden;
+    width: 350px;
+    color:rgb(13, 7, 15);
+    font-size: 13px;
+}
+.Top .topx .list p{
+    font-size: 14px;
+    width: 350px;
+    text-align: justify;
+    height: 150px;
+    overflow: hidden;
+}
+.list .btn button{
+    width: 80px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    margin: 10px 0;
+    height: 40px;
+    background-color: black;
+    color: white;
+    transition: 0.7s;
+}
+.list .btn button:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+
+.decos{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: rgb(17, 65, 199);
+    /* right: 30px; */
+    /* right: 800px; */
+    border-radius: 50%;
+    filter: blur(78px);
+    
+}
+.deco{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: rgb(57, 119, 233);
+    right: 30px;
+    border-radius: 50%;
+    filter: blur(78px);
+    
+}
+@media only screen and (max-width: 1499px){
+    .Top .topx{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 1499px){
+    .Top .topx{
+        width: 97%;
+    }
+   
+}
+@media only screen and (max-width: 1237px){
+    .Top .topx{
+        width: 80%;
+    }
+    .Top .topx .topp{
+        height: 700px;
+        overflow: hidden;
+    }
+    .Top .topx .topp img{
+        width: 400px;
+        height: 400px;
+    }
+    .Top .topx .list .n{
+        height: 50px;
+        width: 400px; 
+        display: flex;
+        justify-content: center;
+    }
+    .Top .topx .tops{
+        width: 400px; 
+        margin: 10px; 
+    }
+    .Top .topx .topp{
+        width: 400px;
+    }
+    .Top .topx .list{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Top .topx .list .t{
+      
+        height: 25px;
+        width: 400px;
+    }
+    .Top .topx .list p{
+        width: 350px;
+        height: 150px;
+     
+    }
+
+}
+@media only screen and (max-width: 1049px){
+    .Top .topx{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 933px){
+    .Top .topx{
+        width: 97%;
+    }
+}
+@media only screen and (max-width: 865px){
+    .Top .topx .topp img{
+        width: 350px;
+        height: 350px;
+    }
+    .Top .topx .list .n{
+        height: 50px;
+        width: 350px; 
+    }
+    .Top .topx .tops{
+        width: 350px; 
+        margin: 10px; 
+    }
+    .Top .topx .topp{
+        width: 350px;
+    }
+    .Top .topx .list{
+        width: 350px;
+        height: 350px;
+    }
+    .Top .topx .list .t{
+        height: 25px;
+        width: 350px;
+    }
+    .Top .topx .list p{
+        width: 350px;
+        height: 150px;
+     
+    }
+
+}
+@media only screen and (max-width: 777px){
+    .Top .topx{
+        width: 97%;
+        justify-content: center;
+    }
+    .Top .topx .topp img{
+        width: 400px;
+        height: 400px;
+    }
+    .Top .topx .list .n{
+        height: 50px;
+        width: 380px; 
+        display: flex;
+        justify-content: center;
+    }
+    .Top .topx .tops{
+        width: 400px; 
+        margin: 10px; 
+        
+    }
+    .Top .topx .topp{
+        width: 400px;
+    }
+    .Top .topx .list{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Top .topx .list .t{
+        height: 25px;
+        width: 400px;
+    }
+    .Top .topx .list p{
+        width: 350px;
+        height: 150px;
+        display: flex;
+    
+     
+    }
+
+}
+
