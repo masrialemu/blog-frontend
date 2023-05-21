@@ -16,12 +16,14 @@
 }
 .Top .topx{
     display: flex;
+    
     flex-wrap: wrap;
 }
 .Top .topx .tops{
     overflow: hidden;
     width: 400px;
     display: flex;
+
     justify-content: center;
     
 }
@@ -30,6 +32,7 @@
     overflow: hidden;
     background-color:hsl(208, 100%, 94%);
     display: flex;
+    /* flex-direction: column-reverse; */
     justify-content: center;
     flex-direction: column;
 }

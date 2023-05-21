@@ -29,6 +29,16 @@
     height:300px;
 
 }
+.your{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.your h1{
+    color:brown;
+}
 .pro .btnn{
     width: 100px;
     height: 40px;

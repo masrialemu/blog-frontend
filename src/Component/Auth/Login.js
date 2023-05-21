@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import './auth.css'
 import { useState } from 'react'
 import ClipLoader from "react-spinners/ClipLoader";
@@ -14,18 +14,40 @@ const override: CSSProperties = {
 
 function Login() {
   const history = useHistory()
-  const {user,setUser}=useContext(Context)
- 
+  const {user,setUser,
+    token, email1, password1, name, admin, profilePicture, updateUser
+  }=useContext(Context)
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const [err,setErr]=useState(false)
   const [loading,setLoading]=useState(false)
+ 
+
+
+
+  
+
   const Logins=async(e)=>{
     e.preventDefault()
+    setLoading(true)
+    
    const res=await axios.post('http://localhost:5000/signin',{email,password})
-   setUser(res.data)
-   localStorage.setItem('user', JSON.stringify(res.data));
+   const { token} = res.data;
+   const { name, isadmin, pic } = res.data.user;
+
+   // Store user details and token in localStorage
+   updateUser({
+    token:token,
+    email1: email,
+    password1: password,
+    name:name,
+    admin:isadmin,
+    profilePicture:pic
+  });
+   
+    setUser(res.data);
     res.data && history.push('/')
+    
     // localStorage.setItem('user',JSON.stringify(setUser(res.data)))
     }
  // console.log(user(JSON.parse(localStorage.getItem('user'))))
@@ -42,15 +64,7 @@ function Login() {
             <input type="password" name="password" className='pass' placeholder='enter your password'  onChange={e=>setPassword(e.target.value)} />
          
            {!loading ?  <input type="submit" value="Login" className='logins' />:
-          <button  className='logins'> 
-          <ClipLoader
-          color="#36d7b7"
-          loading={loading}
-          cssOverride={override}
-          size={13}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-          /></button>
+           <input type="submit" value="Login" className='loginss' disabled />
           }
             {/* <p>forget password</p> */}
             <Link to="/signup">i haven't account</Link>

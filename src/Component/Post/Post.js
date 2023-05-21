@@ -12,7 +12,10 @@ function Post() {
   const [title,setTitle]=useState('')
   const [desc,setDesc]=useState('')
   const [cat,setCat]=useState('')
+  const [Load,setLoad]=useState(false)
+  
   const Uploaded=(e)=>{
+  
     const select = e.target.files[0]
     const fileReader= URL.createObjectURL(select)
     setImg(fileReader)
@@ -26,11 +29,11 @@ function Post() {
   //                   <option value="River">Forest</option>
   //                   <option value="River">Life-style</option>
   //               </select>
-
   const Submit=(e)=>{
     e.preventDefault();
+    setLoad(true)
     const formData = new FormData();
-    formData.append('name', user.user.name);
+    formData.append('email', user.user.email);
     formData.append('title', title);
     formData.append('desc', desc);
     formData.append('image', file);
@@ -39,6 +42,8 @@ function Post() {
     .catch(err => console.log(err));
    
   }
+ 
+
   return (
     <div>
       <div className="post">
@@ -56,7 +61,9 @@ function Post() {
            </label>
            </div>
             <div className="btn">
-                <input type='submit'  value="Post" className='btns' />
+                {!Load ? <input type='submit'  value="Post" className='btns' />:
+                <input type='submit'  value="Post" className='btns' disabled style={{background:'transparent', color:'black', border:'2px solid black'}} />
+              }
             </div>
 
          </form>

@@ -7,7 +7,7 @@ import { Context } from '../Context/Context';
 import axios from 'axios'
 
 
-function Single({name,title,desc,imgs,id}) {
+function Single({email,name,title,desc,imgs,id}) {
   const {user}=useContext(Context)
   const [img,setImg]=useState(null)
   const [file, setFile] = useState(null);
@@ -20,10 +20,16 @@ function Single({name,title,desc,imgs,id}) {
     setImg(fileReader)
     setFile(select)
   }
+  const Delete=async()=>{
+    const res = await axios.delete(`http://localhost:5000/getdelete/${id}`,
+    {headers:{authorization:"Bearer "+user.token }}).then(res => window.location.reload())
+    .catch(err => console.log(err));
+  }
   const Save=async(e)=>{
     // e.perventDefault()
     const formData = new FormData();
     const id= user.user._id;
+    // formData.append('email', user.user.email);
     formData.append('title', titles);
     formData.append('desc', descs);
     formData.append('image', file);
@@ -37,18 +43,7 @@ function Single({name,title,desc,imgs,id}) {
     setEdit(p=>!p)
   }
 
-  const Submit=(e)=>{
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('name', user.user.name);
-    formData.append('title', title);
-    formData.append('desc', desc);
-    formData.append('image', file);
-    const res=axios.post('http://localhost:5000/posts', formData)
-    .then(res => window.location.replace('/'))
-    .catch(err => console.log(err));
-   
-  }
+
   return (
     <div>
        <div className="single">
@@ -56,11 +51,11 @@ function Single({name,title,desc,imgs,id}) {
         <div className="Picss">
     {!file? <img src={imgs} alt="image" />:<img src={img} alt="image" />}
 {!edit && <input type="file" id='upload' style={{display:'none'}}  accept='image' className='file' name="file"  accept='image' className='file' onChange={Uploaded}  />}
-<div className='btnn'>
+{!edit && <div className='btnn'>
            <label htmlFor="upload" className='btnxx'>
            IMAGE
            </label>
-</div>
+</div>}
   </div>
   <div className="title">{edit ? <h1>{title}</h1>:
    <textarea name="title" className='texts' onChange={e=>setTitles(e.target.value)} >{title}</textarea>
@@ -75,9 +70,9 @@ function Single({name,title,desc,imgs,id}) {
   <textarea onChange={e=>setDescs(e.target.value)} name="desc" id="" className='text'>{desc}</textarea>
   }
   </div>
-  {user && user.user.name===name && <div className="btn">
+  {user && user.user.email===email && <div className="btn">
    {edit? <button className="edit" onClick={Edit}>Edit</button>: <button className="edit" onClick={Edit}>Cancel</button>}
-    {edit ? <button className="delete">Delete</button>:<button className="edit" onClick={()=>Save(id)}>Save</button>}
+    {edit ? <button className="delete" onClick={Delete}>Delete</button>:<button className="edit" onClick={()=>Save(id)}>Save</button>}
   </div>}
         </div>
        </div>

@@ -32,7 +32,9 @@
     color: rgb(90, 9, 9);
     justify-content: center;
 }
+
 .contact .contacts span{
+    /* background-color: #f7f2f299; */
     display: flex;
     font-size: 40px;
     font-weight: 600;

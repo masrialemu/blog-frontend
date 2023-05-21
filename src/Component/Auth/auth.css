@@ -8,6 +8,17 @@
     overflow: hidden;
     background-color: hsl(208, 100%, 98%);
 }
+
+.logx .btn{
+    font-size: 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background-color:rebeccapurple;
+    color:white;
+    transition: 0.7s;
+    border-radius: 20px;
+}
 .logx .logsx{
     margin-top: 20px;
     display: flex;

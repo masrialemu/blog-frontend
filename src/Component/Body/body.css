@@ -1,0 +1,26 @@
+.most{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.mosts{
+    /* width: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}  
+
+.most h1{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+ 
+    color: brown;
+}

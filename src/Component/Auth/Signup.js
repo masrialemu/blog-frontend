@@ -8,11 +8,16 @@ function Signup() {
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const [name,setName]=useState('')
+ 
   const Logins=async(e)=>{
    e.preventDefault()
    const res=await axios.post('http://localhost:5000/signup',{name,email,password})
+   
    if(res.data){
-    window.location.replace('/signin')
+    window.location.replace('/login')
+   }
+   else{
+    setErr(true)
    }
   }
   return (
@@ -21,7 +26,7 @@ function Signup() {
       <div className="logsx">
         <form onSubmit={Logins}>
         <h1>Signup Page</h1>
-        { err&& <p className='un'>some thing is wrong</p>}<input type="text" name="email" className='email' placeholder='enter your name' onChange={e=>setName(e.target.value)} />
+        { err&& <p className='un'>some thing is wrong</p>}<input type="text" name="name" className='email' placeholder='enter your name' onChange={e=>setName(e.target.value)} />
           <input type="email" name="email" className='email' placeholder='enter your email'  onChange={e=>setEmail(e.target.value)} />
           <input type="password" name="password" className='pass' placeholder='enter your password' onChange={e=>setPassword(e.target.value)} />
           <input type="password" name="password" className='pass' placeholder='enter your password' />

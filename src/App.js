@@ -9,13 +9,16 @@ import Single from './Main/Single'
 import Contact from './Main/Contact';
 import { Context } from './Component/Context/Context';
 function App() {
-  const {user}=useContext(Context)
+  const {user,setUser,
+    token, email1, password1, name, admin, profilePicture, updateUser
+  }=useContext(Context)
+ 
   return (
     <Routes>
     <Route exact path="/" element={<Home/>}/>
-    <Route path="/post"  element={user ? <Post/>: <Login/>}/>
+    <Route path="/post"  element={name ? <Post/>: <Login/>}/>
     <Route path="/contact"  element={<Contact/>}/>
-    <Route path="/profile"  element={user ? <Profile/>:<Login/>} />
+    <Route path="/profile"  element={name ? <Profile/>:<Login/>} />
     <Route path="/login"  element={<Login/>}/>
     <Route path="/signup"  element={<Signup/>}/>
     <Route path="/single/:id"  element={<Single/>}/>

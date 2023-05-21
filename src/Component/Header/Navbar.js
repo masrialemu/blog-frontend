@@ -6,13 +6,17 @@ import { NavLink } from 'react-router-dom';
 import { Context } from '../Context/Context';
 
 function Navbar() {
-  const {user,Logout,parsedData}=useContext(Context)
+  // const {user,Logout,parsedData}=useContext(Context)
+  const {user,setUser,Save,parsedData,Logout,
+    token, email1, password1, name, admin, profilePicture, updateUser
+  }=useContext(Context)
   const [hide,setHide]=useState(false)
   const [scroll,setScroll]=useState(false)
   const [size,setSize]=useState(window.innerWidth)
   
-  let pic=user && user.user.pic
-  let Pic=user && 'http://localhost:5000/'+pic
+  let pic= profilePicture
+  let Pic= 'http://localhost:5000/'+pic
+  console.log(Pic)
   const ShowAct=()=>{
      setHide(p=>!p)
   }
@@ -63,12 +67,12 @@ function Navbar() {
              <h3> <NavLink  to={'/'}>Home</NavLink></h3>
              <h3><NavLink  to={'/post'}>Post</NavLink></h3>
              <h3><NavLink  to={'/contact'}>Contact</NavLink></h3>
-             <h4 className='login'> {!parsedData ? <NavLink  className={'lg'} to={'/login'}>Login</NavLink>:<NavLink  className={'lg'} onClick={Logout}>Logout</NavLink>}</h4>
+             <h4 className='login'> {!profilePicture ? <NavLink  className={'lg'} to={'/login'}>Login</NavLink>:<NavLink  className={'lg'} onClick={Logout}>Logout</NavLink>}</h4>
             </div>
           </div>
           <div className="pic">
             <div className="pics">
-      <h1><NavLink to={'/profile'}>{!parsedData ? <AiOutlineUserAdd/>: <img className='ppic' src={Pic} />}</NavLink></h1>
+      <h1><NavLink to={'/profile'}>{!profilePicture ? <AiOutlineUserAdd/>: <img className='ppic' src={Pic} />}</NavLink></h1>
         <h2><button className='btn' onClick={ShowAct}>{!hide ? "x":"="}</button></h2>
             </div>
           </div>
