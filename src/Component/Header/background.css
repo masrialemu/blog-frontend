@@ -32,6 +32,11 @@
     /* background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.7)), url(../../img/IMG_20221019_003638_872.jpg) */
     
 } 
+.bg .bgs .h2{
+    font-size: 35px;
+    color: rgb(228, 13, 131);
+}
+
 .bg .bgs h1{
     font-size: 60px;
     color: white;
