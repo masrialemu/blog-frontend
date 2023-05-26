@@ -23,14 +23,16 @@ function Contact() {
     show(true)
   }
  
- 
+ const Back={
+         backgroundColor:!show && "red"
+      }
   const HandleSubmit = async(e) => {
       setLoading(true)
       e.preventDefault()
      if(email==="" && title==="" || description===""){
        return null
      }else{
-       const res=await axios.post('http://localhost:5000/contact', { email, title, description })
+       const res=await axios.post('https://blog-backend-end-m4rj.onrender.com/contact', { email, title, description })
       if(res.data){
         setHide(false)
         setLoading(false)
@@ -77,7 +79,7 @@ function Contact() {
          
         <div className="box">
            <form onSubmit={HandleSubmit}>
-          {!hide && <div className="cm">{show ? <p>The Email is Successfully Sent</p>:<p style={{backgroundColor:"red",color:"black"}}>The Email is Failed</p>}</div>}
+          {!hide && <div className="cm"  style={Back}>{show ? <p>The Email is Successfully Sent</p>:<p style={{color:"white"}}>The Email is Failed</p>}</div>}
            <input style={{color:"black",fontSize:"14px"}} type="email" className='email' placeholder='Please, Enter Your Email'
            value={email}
            onChange={(event) => setEmail(event.target.value)}  />

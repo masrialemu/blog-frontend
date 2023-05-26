@@ -14,9 +14,7 @@ const override: CSSProperties = {
 
 function Login() {
   const history = useHistory()
-  const {user,setUser,
-    token, email1, password1, name, admin, profilePicture, updateUser
-  }=useContext(Context)
+  const {user,setUser}=useContext(Context)
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const [err,setErr]=useState(false)
@@ -31,22 +29,34 @@ function Login() {
     e.preventDefault()
     setLoading(true)
     
-   const res=await axios.post('http://localhost:5000/signin',{email,password})
-   const { token} = res.data;
-   const { name, isadmin, pic } = res.data.user;
-
-   // Store user details and token in localStorage
-   updateUser({
-    token:token,
-    email1: email,
-    password1: password,
-    name:name,
-    admin:isadmin,
-    profilePicture:pic
+   const res=await axios.post('https://blog-backend-end-m4rj.onrender.com/signin',{email,password})
+   .then((response) => {
+    // Handle successful login
+    setUser(response.data)
+    response.data && history.push('/')
+    setLoading(true)
+  })
+  .catch((error) => {
+    // Handle login error
+    console.log('Invalid email or password');
+    setErr(true)
+    setLoading(false)
   });
+
+ 
+
    
-    setUser(res.data);
-    res.data && history.push('/')
+   // Store user details and token in localStorage
+  //  updateUser({
+  //   token:token,
+  //   email1: email,
+  //   password1: password,
+  //   name:name,
+  //   admin:isadmin,
+  //   profilePicture:pic
+  // });
+   
+    
     
     // localStorage.setItem('user',JSON.stringify(setUser(res.data)))
     }

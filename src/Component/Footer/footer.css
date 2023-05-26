@@ -79,9 +79,24 @@
     margin: 6px;
    }
 }
+@media only screen and (max-width: 500px){
+    .footer ul li{
+     margin: 6px;
+    }
+    .footer{
+        width: 100%;
+        height: 250px;
+        background-color: #082032;
+    }
+ }
 @media only screen and (max-width: 432px){
     .footer ul li{
      margin: 4px;
+    }
+    .footer{
+        width: 100%;
+        height: 250px;
+        background-color: #082032;
     }
  }
  @media only screen and (max-width: 400px){

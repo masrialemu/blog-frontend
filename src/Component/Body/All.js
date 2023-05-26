@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-use-history'
 import { Context } from '../Context/Context';
 import axios from 'axios';
 function All() {
-  let Pic='http://localhost:5000/'
   const history = useHistory()
   // ...
   const {user,data,currentPageData}=useContext(Context)
@@ -27,7 +26,7 @@ function All() {
        {currentPageData.map((e)=> <div className="tops" key={e._id}>
         <div className="decos"></div>
             <div className="topp" onClick={()=>More(e._id)}>
-              <img src={Pic+e.public_url} alt={Pic+e.public_url} srcset={Pic+e.public_url} className='immg' />
+              <img src={e.public_url} alt={e.public_url} srcset={e.public_url} className='immg' />
               <div className="list">
                <div className="t">{e.name}</div>
                <div className="n"><h1>{e.title}</h1></div>

@@ -132,3 +132,14 @@
     
         }
 }
+
+@media only screen and (max-width: 514px){
+    .logx{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .logx .logsx{
+       width: 80%;
+    }
+}
