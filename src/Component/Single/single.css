@@ -1,20 +1,35 @@
-.single{
+.single {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-.single .singles {
+  }
+  
+  .single .singles {
     width: 70%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-.single .btnn{
+    overflow: hidden;
+  }
+  
+  .single .des {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .single .des p {
+    width: 750px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .single .btnn {
     width: 100px;
     height: 40px;
     background-color: rgb(73, 67, 80);
-    color:white;
+    color: white;
     font-weight: 600;
     font-size: 20px;
     display: flex;
@@ -23,44 +38,120 @@
     border: none;
     cursor: pointer;
     transition: 0.7s;
-}
-.single .singles img{
-    width: 800px;
-    height: 600px;
-}
-.single .singles .title{
-    color: rebeccapurple;
-    margin: 10px;
-}
-.single .singles .form{
+  }
+  
+.doc{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.doc .docs{
+    /* background-color: rgb(193, 193, 202); */
     width: 70%;
-    justify-content:space-between;
 }
-.single .singles .form .time{
-    font-size: 20px;
-    color: rebeccapurple;
-}
-.single .singles .form .names{
-    font-size: 20px;
-    color: rebeccapurple;
+/* .ddd{
+  height: 300px;
+  background-color: transparent;
+} */
+.doc .docs .tmx{
+    display: flex;
+    justify-content: space-between;
+
+    
 
 }
-.rl{
+.lls{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lls .titx{
+   /* display: flex;
+   justify-content: center; */
+   
+}
+.doc .docs .tmx input{
+  color: black;
+    width: auto;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.doc .docs .lls{
+    /* display: flex;
+    flex-direction: column; */
+    
+}
+.doc .docs .lls input{
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.doc .docs .lls textarea{
+    font-size: 20px;
+    /* height: auto; */
+    height: 500px;
+    border: none;
+    margin-top: 20px;
+    width: 97%;
+    /* background-color: transparent; */
+    outline: none;
+    background-color: aliceblue;
+}
+
+
+
+
+
+  .single .singles img {
+    width: 800px;
+    height: 600px;
+  }
+  
+  .single .singles .title {
+    color: rebeccapurple;
+    margin: 10px;
+  }
+  
+  .single .singles .form {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+  }
+  
+  .single .singles .form .time {
+    font-size: 20px;
+    color: rebeccapurple;
+  }
+  
+  .single .singles .form .names {
+    font-size: 20px;
+    color: rebeccapurple;
+  }
+  
+  .rl {
     display: flex;
     justify-content: center;
     margin: 50px;
     color: rebeccapurple;
     border-bottom: 2px solid rebeccapurple;
-}
-.single .singles .des{
+  }
+  
+  .single .singles .des {
     width: 800px;
     text-align: justify;
     margin: 10px;
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     font-size: 20px;
-}
-.single .singles button{
+  }
+  
+  .single .singles button {
     width: 100px;
     height: 40px;
     background-color: rebeccapurple;
@@ -71,16 +162,19 @@
     border: none;
     transition: 0.7s;
     cursor: pointer;
-}
-.single .singles .delete{
+  }
+  
+  .single .singles .delete {
     background-color: red;
-}
-.single .singles button:hover{
+  }
+  
+  .single .singles button:hover {
     color: blueviolet;
     background-color: transparent;
     border: 2px solid rebeccapurple;
-}
-.single .singles .title .texts{
+  }
+  
+  .single .singles .title .texts {
     color: black;
     font-size: 600;
     width: auto;
@@ -91,129 +185,133 @@
     font-size: 30px;
     border: none;
     border-bottom: 2px solid rebeccapurple;
-}
-.single .singles .text{
-   width: 800px;
-   height: 150px;
-   border: none;
-   border: 2px solid rebeccapurple;
-   outline: none;
-   font-size: 20px;
-}
-@media only screen and (max-width: 850px){
-    .single .singles img{
-        width: 750px;
-        height: 600px;
+  }
+  
+  .single .singles .text {
+    width: 800px;
+    height: 150px;
+    border: none;
+    border: 2px solid rebeccapurple;
+    outline: none;
+    font-size: 20px;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 850px) {
+    .single .singles img {
+      width: 750px;
+      height: 600px;
     }
-    .single .singles .des{
-        width: 750px;
-        text-align: justify;
-        margin: 10px;
-        background-color:antiquewhite;
-        font-size: 20px;
+    .single .singles .des {
+      width: 750px;
+      text-align: justify;
+      margin: 10px;
+      background-color: antiquewhite;
+      font-size: 20px
     }
-    .single .singles .text{
+      .single .singles .text {
         width: 750px;
         height: 150px;
         border: none;
         border: 2px solid rebeccapurple;
         outline: none;
         font-size: 20px;
-     }
+    }
 }
-@media only screen and (max-width: 760px){
-    .single .singles img{
+
+@media only screen and (max-width: 760px) {
+    .single .singles img {
         width: 650px;
         height: 550px;
     }
-    .single .singles .des{
+    .single .singles .des {
         width: 650px;
         text-align: justify;
         margin: 10px;
-        background-color:antiquewhite;
+        background-color: antiquewhite;
         font-size: 20px;
     }
-    .single .singles .text{
+    .single .singles .text {
         width: 650px;
         height: 150px;
         border: none;
         border: 2px solid rebeccapurple;
         outline: none;
         font-size: 20px;
-     }
+    }
 }
-@media only screen and (max-width: 660px){
-    .single .singles img{
+
+@media only screen and (max-width: 660px) {
+    .single .singles img {
         width: 600px;
         height: 500px;
     }
-    .single .singles .des{
+    .single .singles .des {
         width: 600px;
-
     }
-    .single .singles .text{
+    .single .singles .text {
         width: 600px;
         height: 150px;
         font-size: 20px;
-     }
+    }
 }
-@media only screen and (max-width: 610px){
-    .single .singles img{
+
+@media only screen and (max-width: 610px) {
+    .single .singles img {
         width: 500px;
         height: 400px;
     }
-    .single .singles .des{
+    .single .singles .des {
         width: 500px;
-
     }
-    .single .singles .text{
+    .single .singles .text {
         width: 500px;
         height: 150px;
         font-size: 20px;
-     }
+    }
 }
-@media only screen and (max-width: 510px){
-    .single .singles img{
+
+@media only screen and (max-width: 510px) {
+    .single .singles img {
         width: 450px;
         height: 300px;
     }
-    .single .singles .des{
+    .single .singles .des {
         width: 450px;
-
     }
-    .single .singles .text{
+    .single .singles .text {
         width: 450px;
         height: 150px;
         font-size: 20px;
-     }
+    }
 }
-@media only screen and (max-width: 460px){
-    .single .singles img{
+
+@media only screen and (max-width: 460px) {
+    .single .singles img {
         width: 400px;
         height: 300px;
     }
-    .single .singles .des{
+    .single .singles .des {
         width: 400px;
-
     }
-    .single .singles .text{
+    .single .singles .text {
         width: 400px;
         height: 150px;
         font-size: 10px;
-     }
+    }
 }
-@media only screen and (max-width: 410px){
-    .single .singles img{
+
+@media only screen and (max-width: 410px) {
+    .single .singles img {
         width: 350px;
         height: 350px;
     }
-    .single .singles .des{
+    .single .singles .des {
         width: 350px;
-
     }
-    .single .singles .text{
+    .single .singles .text {
         width: 350px;
         height: 150px;
         font-size: 20px;
-     }
+    }
 }

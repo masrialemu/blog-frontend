@@ -13,22 +13,21 @@ function Single() {
   const [data,setData]=useState({})
   const location=useLocation()
   const id= location.pathname.split('/')[2]
-  let Pic='http://localhost:5000/'
   useEffect(()=>{
     const Fech=async()=>{
-     const res= await axios.get(`http://localhost:5000/sgetpost/${id}`)
+     const res= await axios.get(`https://blog-backend-end-m4rj.onrender.com/sgetpost/${id}`)
      
      setData(res.data.user);
-
+      
     }
     Fech()
-  },[0])
+  },[])
   
-  //console.log(Pic+data.public_url)
+  
   return (
     <div>
     <Navbar/>
-    {<Singles title={data.title} desc={data.desc} name={data.name} imgs={Pic+data.public_url} id={data._id} email={data.email} /> }
+    {<Singles title={data.title} desc={data.desc} place={data.place} imgs={data.public_url} id={data._id} email={data.email} time={data.createdAt} /> }
     <h1 className="rl">Related</h1>
     <Alls/>
     <Footer/>

@@ -11,7 +11,7 @@ function Post() {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
-  const [cat, setCat] = useState('');
+  const [place, setPlace] = useState('');
   const [Load, setLoad] = useState(false);
   const history = useHistory();
 
@@ -35,12 +35,13 @@ function Post() {
     formData.append('email', user.user.email);
     formData.append('title', title);
     formData.append('desc', desc);
+    formData.append('place', place);
     formData.append('image', file);
 
     axios.post(`https://blog-backend-end-m4rj.onrender.com/posts/${user.user.id}`, formData, {
         headers: { authorization: 'Bearer ' + user.token },
       })
-      .then((res) => history.push('/'))
+      .then((res) => window.location.replace('/'))
       .catch((err) => console.log(err));
   };
 
@@ -57,6 +58,13 @@ function Post() {
               className="email"
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Title"
+            />
+            <input
+              type="text"
+              name="title"
+              className="email"
+              onChange={(e) => setPlace(e.target.value)}
+              placeholder="Place"
             />
             <textarea
               name="text"

@@ -26,11 +26,14 @@ function All() {
        {currentPageData.map((e)=> <div className="tops" key={e._id}>
         <div className="decos"></div>
             <div className="topp" onClick={()=>More(e._id)}>
-              <img src={e.public_url} alt={e.public_url} srcset={e.public_url} className='immg' />
+              <img src={e.public_url} alt={e.public_url}  className='immg' />
               <div className="list">
-               <div className="t">{e.name}</div>
+               <div className="tms">
+               <div className="t">{e.place}</div>
+               <div className="t">{new Date(e.createdAt).toDateString()}</div>
+               </div>
                <div className="n"><h1>{e.title}</h1></div>
-               <p>{e.desc}
+               <p>{e.desc.substring(0, 200) + '.....'}
                </p>
                  <div className="btn">
                 <button onClick={()=>More(e._id)}>More</button>{ user && user.user.name &&<button onClick={()=>More(e._id)}>Edit</button>
