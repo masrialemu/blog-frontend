@@ -7,9 +7,7 @@ import { Context } from '../Context/Context';
 import User from '../../img/user.png'
 function Navbar() {
   // const {user,Logout,parsedData}=useContext(Context)
-  const {user,setUser,Save,parsedData,Logout,
-    token, email1, password1, name, admin, profilePicture, updateUser
-  }=useContext(Context)
+  const {user,setUser}=useContext(Context)
   const [hide,setHide]=useState(false)
   const [scroll,setScroll]=useState(false)
   const [size,setSize]=useState(window.innerWidth)
